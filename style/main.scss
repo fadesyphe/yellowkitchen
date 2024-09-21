@@ -1,3 +1,59 @@
-@import 'reset';
-@import 'base';
-@import 'header';
+@import "base";
+
+.main {
+  padding: 25px 0;
+  overflow: hidden;
+
+
+  &-inner {
+    height: 100vh;
+    background: no-repeat right center url(../images/main_back.png);
+    background-size: contain;
+  }
+
+  &-info {
+    padding-top: 95px;
+    margin-right: auto;
+  }
+  &-title {
+    @extend %section-title;
+    margin: 95px 0 88px;
+    max-width: 535px;
+  }
+
+  &-buttons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  &-button {
+    width: 100%;
+    max-width: min-content;
+    padding: 18.5px 24px;
+    border: 2px solid $yellow-bright;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    transition: .5s ease;
+
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: .5px;
+      line-height: 20px;
+    }
+
+    &.active {
+      background-color: $yellow-bright;
+    }
+
+    &:hover {
+      background-color: $yellow-light;
+    }
+
+    &:disabled {
+      opacity: .4;
+    }
+  }
+}

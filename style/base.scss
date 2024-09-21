@@ -18,3 +18,12 @@ $gray-bg: #F4F2FC;
   height: 24px;
   transition: .5s ease;
 }
+
+%section-title {
+  font: {
+    size: 58px;
+    weight: 300;
+  }
+  line-height: 64px;
+  letter-spacing: 0.05em;
+}
