@@ -1,0 +1,54 @@
+@import 'base';
+
+.header {
+  color: $gray-second-text;
+  font-weight: 700;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid $gray-light;
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  &-button {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    padding: 12px;
+    transition: .5s ease;
+
+    &:hover {
+      color: $gray-dark;
+      .icon {
+        fill: $gray-dark;
+      }
+    }
+
+    & .icon {
+      fill: $gray-second-text;
+
+    }
+
+  }
+
+  [data-navigation] {
+    border-radius: 50%;
+
+    [data-burger-close] {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  [data-navigation]:hover {
+    background-color: $gray-light;
+  }
+}

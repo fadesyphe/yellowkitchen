@@ -1,0 +1,20 @@
+$yellow-bright: #FFE145;
+$yellow-light: #FFF7CC;
+$yellow-dark: #B79C0F;
+$gray-second-text: #9093A6;
+$gray-dark: #3F4255;
+$gray-light: #d4d7e6;
+$gray-bg: #F4F2FC;
+
+.container {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.icon {
+  fill: $gray-light;
+  width: 24px;
+  height: 24px;
+  transition: .5s ease;
+}
