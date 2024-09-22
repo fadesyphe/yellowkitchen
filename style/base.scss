@@ -28,3 +28,19 @@ $gray-bg: #F4F2FC;
   line-height: 64px;
   letter-spacing: 0.05em;
 }
+
+.button-secondary {
+  background-color: $gray-bg;
+  padding: 16px 24px;
+  border-radius: 4px;
+
+  color: $gray-second-text;
+  font-weight: 700;
+  letter-spacing: .5px;
+
+  transition: .5s ease;
+
+  &:hover {
+    background-color: $gray-light;
+  }
+}

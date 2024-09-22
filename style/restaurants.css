@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.icon {
+  fill: #d4d7e6;
+  width: 24px;
+  height: 24px;
+  transition: 0.5s ease;
+}
+
+.section-title {
+  font-family: "Poppins";
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+}
+
+.button-secondary {
+  background-color: #F4F2FC;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #9093A6;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+}
+.button-secondary:hover {
+  background-color: #d4d7e6;
+}
+
+.restaurants {
+  padding: 48px 0 72px;
+}
+.restaurants-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.restaurants-slider img {
+  border-radius: 4px 4px 0 0;
+}
+
+.section-title {
+  font-size: 36px;
+  letter-spacing: 0.08em;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.button-navigation {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.button-navigation svg {
+  height: 16px;
+  width: 16px;
+  fill: #9093A6;
+  transition: 0.5s ease;
+}
+.button-navigation:hover {
+  background-color: #9093A6;
+}
+.button-navigation:hover svg {
+  fill: #3F4255;
+}
+
+.button-navigation--prev {
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.button-navigation--next {
+  transform: translate(0, -50%);
+  right: 0;
+}
+.button-navigation--next svg {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=restaurants.css.map */

@@ -9,4 +9,17 @@
   width: 24px;
   height: 24px;
   transition: 0.5s ease;
+}
+
+.button-secondary {
+  background-color: #F4F2FC;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #9093A6;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+}
+.button-secondary:hover {
+  background-color: #d4d7e6;
 }/*# sourceMappingURL=base.css.map */
