@@ -2,17 +2,11 @@
 
 .main {
   padding: 25px 0;
-  overflow: hidden;
-
-
-  &-inner {
-    height: 100vh;
-    background: no-repeat right center url(../images/main_back.png);
-    background-size: contain;
-  }
+  background: no-repeat right center url(../images/main_back.png);
+  background-size: contain;
 
   &-info {
-    padding-top: 95px;
+    padding: 95px 0 276px;
     margin-right: auto;
   }
   &-title {

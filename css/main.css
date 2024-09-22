@@ -12,7 +12,6 @@
 }
 
 .main-title {
-  font-family: "Poppins";
   font-size: 58px;
   font-weight: 300;
   line-height: 64px;
@@ -21,11 +20,14 @@
 
 .main {
   padding: 25px 0;
-  background: no-repeat right center url(../images/main_back.png);
-  background-size: contain;
+  overflow: hidden;
+}
+.main-inner {
+  height: 100vh;
+  background-size: 803px;
 }
 .main-info {
-  padding: 95px 0 276px;
+  padding-top: 95px;
   margin-right: auto;
 }
 .main-title {

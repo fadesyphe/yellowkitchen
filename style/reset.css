@@ -5,6 +5,7 @@
 }
 
 html, body {
+  height: 100vh;
   overflow-x: hidden;
   color: #3F4255;
   font-family: "Martel Sans", sans-serif;
