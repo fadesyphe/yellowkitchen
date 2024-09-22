@@ -22,25 +22,100 @@ $gray-bg: #F4F2FC;
 %section-title {
   font: {
     family: "Poppins";
-    size: 58px;
+    size: 36px;
     weight: 300;
   }
   line-height: 64px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .button-secondary {
+  position: relative;
+  overflow: hidden;
+
   background-color: $gray-bg;
-  padding: 16px 24px;
   border-radius: 4px;
+  padding: 16px 24px;
 
   color: $gray-second-text;
   font-weight: 700;
   letter-spacing: .5px;
 
   transition: .5s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $gray-light;
+  }
+
+  &:disabled {
+    opacity: .4;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &.active:after {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    opacity: .4;
+    background-color: #fff;
+
+    position: absolute;
+    z-index: 5;
+    right: 4px;
+    top: 4px;
+  }
+}
+
+.button-primary {
+  background-color: $yellow-bright;
+  border-radius: 4px;
+  color: $yellow-dark;
+  padding: 26px 24px;
+
+  font-weight: 700;
+  letter-spacing: .5px;
+
+  position: relative;
+  overflow: hidden;
+  border: none;
+
+  transition: .5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-light;
+  }
+
+  &:disabled {
+    opacity: .4;
+  }
+
+  &.active:before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    opacity: .4;
+    background-color: #fff;
+
+    position: absolute;
+    z-index: 5;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
   }
 }

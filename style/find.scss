@@ -1,0 +1,61 @@
+@import 'base';
+
+.find {
+  padding: 80px 0;
+  background-color: $gray-bg;
+
+  .section-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-info {
+    max-width: 510px;
+    color: $gray-dark;
+
+    p {
+      margin-top: 24px;
+      letter-spacing: .5px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  &-element {
+    display: flex;
+    padding: 24px 16px;
+    background-color: #fff;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &-text {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    max-width: 272px;
+    margin-left: 8px;
+
+    &::placeholder, & {
+      color: $gray-second-text;
+      font: {
+        family: "Martel Sans";
+        size: 16px;
+      }
+      line-height: 24px;
+    }
+
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

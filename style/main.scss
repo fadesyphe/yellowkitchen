@@ -11,6 +11,8 @@
   }
   &-title {
     @extend %section-title;
+    font-size: 58px !important;
+    letter-spacing: 0.05em;
     margin: 95px 0 88px;
     max-width: 535px;
   }
