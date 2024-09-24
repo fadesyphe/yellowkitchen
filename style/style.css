@@ -1442,6 +1442,7 @@ button {
 .peculiarities {
   padding: 79px 0;
   background: no-repeat left center url(../images/peculiarities_bg.png) #f9fbfd;
+  background-size: cover;
 }
 .peculiarities .section-inner {
   display: flex;
@@ -1481,4 +1482,7 @@ button {
 }
 .peculiarities-item:nth-child(2) .peculiarities-number:after, .peculiarities-item:nth-child(3) .peculiarities-number:after {
   content: "11";
+}
+.map {
+  padding: 72px 0;
 }/*# sourceMappingURL=style.css.map */
