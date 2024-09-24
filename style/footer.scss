@@ -1,0 +1,98 @@
+@import 'base';
+
+.footer {
+  padding: 48px 0;
+  background-color: $gray-dark;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-logo {
+    width: 100%;
+    max-width: 296px;
+
+    &-links {
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid $gray-light;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+    }
+  }
+
+  &-menu {
+
+    &-title {
+      @extend %section-title2;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      color: $gray-light;
+      font-weight: 700;
+      letter-spacing: 0.05px;
+    }
+
+    &-link {
+      transition: .5s ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &-bottom {
+    margin-top: 98px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 54px;
+
+      font: {
+        family: "Martel Sans", sans-serif;
+        size: 12px;
+      }
+      line-height: 16px;
+      color: #fff;
+
+      a {
+        font-weight: 800;
+        transition: .5s ease;
+
+        &:hover {
+          color: $gray-light;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: min-content;
+
+  &-item {
+
+    svg {
+      @extend .icon;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.container {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.icon, .social-item svg {
+  fill: #d4d7e6;
+  width: 24px;
+  height: 24px;
+  transition: 0.5s ease;
+}
+
+.footer-menu-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.button-secondary {
+  position: relative;
+  overflow: hidden;
+  background-color: #F4F2FC;
+  border-radius: 4px;
+  padding: 16px 24px;
+  color: #9093A6;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.button-secondary:hover {
+  background-color: #d4d7e6;
+}
+.button-secondary:disabled {
+  opacity: 0.4;
+}
+.button-secondary span {
+  position: relative;
+  z-index: 10;
+}
+.button-secondary.active:after {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: #fff;
+  position: absolute;
+  z-index: 5;
+  right: 4px;
+  top: 4px;
+}
+
+.button-primary {
+  background-color: #FFE145;
+  border-radius: 4px;
+  color: #B79C0F;
+  padding: 26px 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.button-primary:hover {
+  background-color: #FFF7CC;
+}
+.button-primary:disabled {
+  opacity: 0.4;
+}
+.button-primary.active:before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: #fff;
+  position: absolute;
+  z-index: 5;
+  right: 8px;
+  bottom: 8px;
+}
+.button-primary span {
+  position: relative;
+  z-index: 10;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-lock {
+  display: block !important;
+}
+
+.button-navigation {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.button-navigation svg {
+  height: 16px;
+  width: 16px;
+  fill: #9093A6;
+  transition: 0.5s ease;
+}
+.button-navigation:hover {
+  background-color: #9093A6;
+}
+.button-navigation:hover svg {
+  fill: #3F4255;
+}
+
+.button-navigation--prev {
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.button-navigation--next {
+  transform: translate(0, -50%);
+  right: 0;
+}
+.button-navigation--next svg {
+  transform: rotate(180deg);
+}
+
+.footer {
+  padding: 48px 0;
+  background-color: #3F4255;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-logo {
+  width: 100%;
+  max-width: 296px;
+}
+.footer-logo-links {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid #d4d7e6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-menu-title {
+  color: #fff;
+  margin-bottom: 24px;
+}
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #d4d7e6;
+  font-weight: 700;
+  letter-spacing: 0.05px;
+}
+.footer-menu-link {
+  transition: 0.5s ease;
+}
+.footer-menu-link:hover {
+  color: #fff;
+}
+.footer-bottom {
+  margin-top: 98px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 54px;
+  font-family: "Martel Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+.footer-bottom-info a {
+  font-weight: 800;
+  transition: 0.5s ease;
+}
+.footer-bottom-info a:hover {
+  color: #d4d7e6;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}/*# sourceMappingURL=footer.css.map */
