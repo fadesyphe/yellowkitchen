@@ -21,12 +21,20 @@ $gray-bg: #F4F2FC;
 
 %section-title {
   font: {
-    family: "Poppins";
+    family: "Poppins", sans-serif;
     size: 36px;
     weight: 300;
   }
   line-height: 64px;
   letter-spacing: 0.08em;
+}
+%section-title2 {
+  font: {
+    family: "Poppins", sans-serif;
+    size: 24px;
+    weight: 600;
+  }
+  line-height: 32px;
 }
 
 .button-secondary {

@@ -11,12 +11,11 @@
   transition: 0.5s ease;
 }
 
-.section-title {
+.peculiarities-name {
   font-family: "Poppins", sans-serif;
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 64px;
-  letter-spacing: 0.08em;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
 }
 
 .button-secondary {
@@ -140,15 +139,46 @@
   transform: rotate(180deg);
 }
 
-.restaurants {
-  padding: 48px 0 72px;
+.peculiarities {
+  padding: 79px 0;
+  background: no-repeat left center url(../images/peculiarities_bg.png) #f9fbfd;
 }
-.restaurants-header {
+.peculiarities .section-inner {
   display: flex;
+  justify-content: center;
+  gap: 25px;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 48px;
 }
-.restaurants-slider img {
-  border-radius: 4px 4px 0 0;
-}/*# sourceMappingURL=restaurants.css.map */
+.peculiarities-item {
+  min-width: 183px;
+  text-align: center;
+}
+.peculiarities-number {
+  width: 126px;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  background-color: #FFE145;
+  position: relative;
+  border-radius: 50%;
+}
+.peculiarities-number:after {
+  content: "1";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 22px;
+  left: 0;
+  width: 126px;
+  aspect-ratio: 1/1;
+  font-family: "Popins", sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 50%;
+  border: 1px solid #B79C0F;
+}
+.peculiarities-item:nth-child(2) .peculiarities-number:after, .peculiarities-item:nth-child(3) .peculiarities-number:after {
+  content: "11";
+}/*# sourceMappingURL=peculiarities.css.map */

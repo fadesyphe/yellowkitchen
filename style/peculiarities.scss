@@ -1,0 +1,62 @@
+@import 'base';
+
+.peculiarities {
+  padding: 79px 0;
+  background: no-repeat left center url(../images/peculiarities_bg.png) #f9fbfd;
+
+  .section-inner {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+  }
+
+  &-item {
+    min-width: 183px;
+    text-align: center;
+  }
+
+  &-number {
+    width: 126px;
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+    background-color: $yellow-bright;
+    position: relative;
+    border-radius: 50%;
+
+    &:after {
+      content: "1";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      z-index: 10;
+      bottom: 22px;
+      left: 0;
+
+      width: 126px;
+      aspect-ratio: 1 / 1;
+
+      font: {
+        family: "Popins", sans-serif;
+        size: 58px;
+        weight: 700;
+      }
+      letter-spacing: .05em;
+
+      border-radius: 50%;
+      border: 1px solid $yellow-dark;
+    }
+  }
+
+  &-item:nth-child(2) &-number:after,
+  &-item:nth-child(3) &-number:after {
+    content: "11";
+  }
+
+  &-name {
+    @extend %section-title2;
+  }
+
+}
