@@ -8,3 +8,15 @@ const swiperRestaurants = new Swiper('.restaurants-swiper', {
     prevEl: '#restaurants-prev',
   },
 });
+
+const swiperSpecialities = new Swiper('.specialities-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 8,
+
+  navigation: {
+    nextEl: '#specialities-next',
+    prevEl: '#specialities-prev',
+  },
+});
+

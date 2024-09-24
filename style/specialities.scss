@@ -1,0 +1,25 @@
+@import 'base';
+
+.specialities {
+  padding: 72px 0;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  &-slider {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

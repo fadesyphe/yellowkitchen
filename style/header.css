@@ -84,6 +84,54 @@
   z-index: 10;
 }
 
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-lock {
+  display: block !important;
+}
+
+.button-navigation {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.button-navigation svg {
+  height: 16px;
+  width: 16px;
+  fill: #9093A6;
+  transition: 0.5s ease;
+}
+.button-navigation:hover {
+  background-color: #9093A6;
+}
+.button-navigation:hover svg {
+  fill: #3F4255;
+}
+
+.button-navigation--prev {
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.button-navigation--next {
+  transform: translate(0, -50%);
+  right: 0;
+}
+.button-navigation--next svg {
+  transform: rotate(180deg);
+}
+
 .header {
   color: #9093A6;
   font-weight: 700;
