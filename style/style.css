@@ -342,23 +342,50 @@ button {
 }
 
 .header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
   color: #9093A6;
   font-weight: 700;
   padding: 0.75rem 0;
   border-bottom: 1px solid #d4d7e6;
+  background-color: #fff;
+  width: 100%;
 }
-.header-inner {
+.header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.menu {
+.header-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(48, 48, 48, 0.6);
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header-buttons {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-.menu-button {
+.header-buttons [data-navigation] {
+  border-radius: 50%;
+}
+.header-buttons [data-navigation] [data-burger-close] {
+  visibility: hidden;
+  opacity: 0;
+}
+.header-buttons [data-navigation]:hover {
+  background-color: #d4d7e6;
+}
+.header-button {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -366,24 +393,82 @@ button {
   padding: 12px;
   transition: 0.5s ease;
 }
-.menu-button:hover {
+.header-button:hover {
   color: #3F4255;
 }
-.menu-button:hover .icon, .menu-button:hover .social-item svg, .social-item .menu-button:hover svg {
+.header-button:hover .icon, .header-button:hover .social-item svg, .social-item .header-button:hover svg {
   fill: #3F4255;
 }
-.menu-button .icon, .menu-button .social-item svg, .social-item .menu-button svg {
+.header-button .icon, .header-button .social-item svg, .social-item .header-button svg {
   fill: #9093A6;
 }
-.menu [data-navigation] {
-  border-radius: 50%;
+
+.menu {
+  width: 100%;
+  max-width: 285px;
+  padding: 22px 42px 22px 36px;
+  background-color: #F4F2FC;
+  margin-left: auto;
+  height: 100%;
+  font-family: "Martel Sans", sans-serif;
+  transform: translate(100%, 0);
+  transition: 0.5s ease;
 }
-.menu [data-navigation] [data-burger-close] {
-  visibility: hidden;
-  opacity: 0;
+.menu-contact {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 24px;
 }
-.menu [data-navigation]:hover {
-  background-color: #d4d7e6;
+.menu-contact a:has(.icon, .social-item svg):hover .icon, .menu-contact a:has(.icon, .social-item svg):hover .social-item svg, .social-item .menu-contact a:has(.icon, .social-item svg):hover svg {
+  fill: #3F4255 !important;
+}
+.menu-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.menu-contact-info a {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: #3F4255;
+}
+.menu-contact-info p {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+}
+.menu-item {
+  border-top: 1px solid #F4F2FC;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.5s ease;
+}
+.menu-item a {
+  padding: 22px 0;
+  display: block;
+}
+.menu-item:hover {
+  color: #3F4255;
+}
+.menu-item:nth-child(4) {
+  border-bottom: 1px solid #F4F2FC;
+}
+.menu-item:has(.icon, .social-item svg) {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  padding: 22px 0;
+}
+.menu-item:has(.icon, .social-item svg):hover .icon, .menu-item:has(.icon, .social-item svg):hover .social-item svg, .social-item .menu-item:has(.icon, .social-item svg):hover svg {
+  fill: #3F4255;
+  transform: rotate(180deg);
 }
 
 .container {

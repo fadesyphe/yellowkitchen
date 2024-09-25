@@ -127,6 +127,12 @@
   <g id="facebook">
     <path d="M23 12C23 5.93026 18.0697 1 12 1C5.93026 1 1 5.93026 1 12C1 17.4944 5.0277 22.041 10.2851 22.8646V15.1703H7.4759V11.9887H10.2851V9.56308C10.2851 6.81026 11.921 5.2759 14.4256 5.2759C15.6328 5.2759 16.8738 5.51282 16.8738 5.51282V8.19795H15.4974C14.1323 8.19795 13.6923 9.05538 13.6923 9.9241V11.9887H16.7497L16.2646 15.1703H13.7036V22.8646C18.9723 22.041 23 17.4944 23 12Z" />
   </g>
+  <g id="arrow_down">
+    <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" />
+  </g>
+  <g id="call">
+    <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.33 14.9 16.22 14.89 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.38 15.93 8.06 13.62 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.7 6.45 8.5 5.25 8.5 4C8.5 3.45 8.05 3 7.5 3Z" />
+  </g>
 </svg>
 
 
@@ -135,29 +141,66 @@
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="#" class="logo">
-          <img src="./images/header_logo.svg" alt="Логотип сайта">
-        </a>
-        <nav class="menu">
-          <button class="menu-button" data-log_in>
-            <svg class="icon">
-              <use xlink:href="#person"  />
-            </svg>
-            Log in
-          </button>
-          <button class="menu-button" data-cart>
-            <svg class="icon">
-              <use xlink:href="#cart" />
-            </svg>
-            0
-          </button>
-          <button class="menu-button" data-navigation>
-            <svg class="icon">
-              <use xlink:href="#nav_open" data-burger-open/>
-              <use xlink:href="#nav_close" data-burger-close/>
-            </svg>
-          </button>
-        </nav>
+        <div class="header-top">
+          <a href="#" class="logo">
+            <img src="./images/header_logo.svg" alt="Логотип сайта">
+          </a>
+          <div class="header-buttons">
+            <button class="header-button" data-log_in>
+              <svg class="icon">
+                <use xlink:href="#person"  />
+              </svg>
+              Log in
+            </button>
+            <button class="header-button" data-cart>
+              <svg class="icon">
+                <use xlink:href="#cart" />
+              </svg>
+              0
+            </button>
+            <button class="header-button" data-navigation>
+              <svg class="icon">
+                <use xlink:href="#nav_open" data-burger-open/>
+                <use xlink:href="#nav_close" data-burger-close/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header-overlay">
+          <nav class="menu">
+            <div class="menu-contact">
+              <a href="tel:0800 111 126">
+                <svg class="icon">
+                  <use xlink:href="#call" />
+                </svg>
+              </a>
+              <div class="menu-contact-info">
+                <a href="tel:0800 111 126">0800 111 126</a>
+                <time datetime="8:00 - 22:00">8:00 - 22:00</time>
+              </div>
+            </div>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="#delivery" class="menu-link">Delivery info</a>
+              </li>
+              <li class="menu-item">
+                <a href="#about" class="menu-link">About us</a>
+              </li>
+              <li class="menu-item">
+                <a href="#restaurants" class="menu-link">Restaurants</a>
+              </li>
+              <li class="menu-item">
+                <a href="#specialities" class="menu-link">Specialities</a>
+              </li>
+              <button class="menu-item">
+                English
+                <svg class="icon">
+                  <use xlink:href="#arrow_down" />
+                </svg>
+              </button>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -182,7 +225,7 @@
     </div>
   </main>
 
-  <section class="services">
+  <section class="services" id="delivery">
     <div class="container">
       <div class="services-wrapper">
         <div class="services-item">
@@ -208,7 +251,7 @@
   </section>
 
 
-  <section class="restaurants">
+  <section class="restaurants" id="restaurants">
     <div class="container">
       <div class="section-inner">
         <div class="restaurants-header">
@@ -278,7 +321,7 @@
     </div>
   </section>
 
-  <section class="specialities">
+  <section class="specialities" id="specialities">
     <div class="container">
       <div class="section-inner">
         <div class="specialities-header">
@@ -390,7 +433,7 @@
     </div>
   </section>
 
-  <section class="instagram">
+  <section class="instagram" id="about">
     <div class="container">
       <div class="section-inner">
         <h2 class="section-title">#YellowKitchens <span>in instagram</span></h2>
@@ -469,7 +512,12 @@
                 <a href="" class="footer-menu-link">Sign up to deliver</a>
               </li>
               <li class="footer-menu-item">
-                <a href="" class="footer-menu-link">English</a>
+                <a href="" class="footer-menu-link">
+                  English
+                  <svg class="icon">
+                    <use xlink:href="#arrow_down" />
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
