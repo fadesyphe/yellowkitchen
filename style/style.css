@@ -13,6 +13,10 @@ html, body {
   line-height: 1.5;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -49,7 +53,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -198,7 +202,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -342,16 +346,15 @@ button {
 }
 
 .header {
-  position: fixed;
   z-index: 100;
   left: 0;
   top: 0;
-  color: #9093A6;
-  font-weight: 700;
+  width: 100%;
   padding: 0.75rem 0;
+  font-weight: 700;
+  color: #9093A6;
   border-bottom: 1px solid #d4d7e6;
   background-color: #fff;
-  width: 100%;
 }
 .header-top {
   display: flex;
@@ -360,30 +363,25 @@ button {
 }
 .header-overlay {
   position: absolute;
-  top: 100%;
+  top: 72.8px;
   left: 0;
   z-index: 20;
   background-color: rgba(48, 48, 48, 0.6);
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 72.8px);
   visibility: hidden;
   opacity: 0;
   transition: 0.5s ease;
+  overflow-x: hidden;
+}
+.header-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 .header-buttons {
   display: flex;
   align-items: center;
   gap: 3rem;
-}
-.header-buttons [data-navigation] {
-  border-radius: 50%;
-}
-.header-buttons [data-navigation] [data-burger-close] {
-  visibility: hidden;
-  opacity: 0;
-}
-.header-buttons [data-navigation]:hover {
-  background-color: #d4d7e6;
 }
 .header-button {
   display: flex;
@@ -393,33 +391,54 @@ button {
   padding: 12px;
   transition: 0.5s ease;
 }
+.header-button:last-child {
+  border-radius: 50%;
+}
+.header-button:last-child:hover {
+  background-color: #d4d7e6;
+}
+.header-button:last-child [data-burger-close] {
+  visibility: hidden;
+  opacity: 0;
+}
+.header-button:last-child.active [data-burger-close] {
+  visibility: visible;
+  opacity: 1;
+}
+.header-button:last-child.active [data-burger-open] {
+  visibility: hidden;
+  opacity: 0;
+}
 .header-button:hover {
   color: #3F4255;
 }
-.header-button:hover .icon, .header-button:hover .social-item svg, .social-item .header-button:hover svg {
+.header-button:hover .icon {
   fill: #3F4255;
 }
-.header-button .icon, .header-button .social-item svg, .social-item .header-button svg {
+.header-button .icon {
   fill: #9093A6;
 }
 
 .menu {
   width: 100%;
   max-width: 285px;
-  padding: 22px 42px 22px 36px;
-  background-color: #F4F2FC;
-  margin-left: auto;
   height: 100%;
+  padding: 22px 42px 22px 36px;
+  margin-left: auto;
+  background-color: #F4F2FC;
   font-family: "Martel Sans", sans-serif;
   transform: translate(100%, 0);
   transition: 0.5s ease;
+}
+.menu.active {
+  transform: translate(0, 0);
 }
 .menu-contact {
   display: flex;
   gap: 13px;
   margin-bottom: 24px;
 }
-.menu-contact a:has(.icon, .social-item svg):hover .icon, .menu-contact a:has(.icon, .social-item svg):hover .social-item svg, .social-item .menu-contact a:has(.icon, .social-item svg):hover svg {
+.menu-contact a:has(.icon):hover .icon {
   fill: #3F4255 !important;
 }
 .menu-contact-info {
@@ -460,13 +479,13 @@ button {
 .menu-item:nth-child(4) {
   border-bottom: 1px solid #F4F2FC;
 }
-.menu-item:has(.icon, .social-item svg) {
+.menu-item:has(.icon) {
   margin-left: auto;
   display: flex;
   align-items: baseline;
   padding: 22px 0;
 }
-.menu-item:has(.icon, .social-item svg):hover .icon, .menu-item:has(.icon, .social-item svg):hover .social-item svg, .social-item .menu-item:has(.icon, .social-item svg):hover svg {
+.menu-item:has(.icon):hover .icon {
   fill: #3F4255;
   transform: rotate(180deg);
 }
@@ -477,7 +496,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -672,7 +691,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -844,7 +863,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1006,7 +1025,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1211,7 +1230,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1381,7 +1400,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1578,7 +1597,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1751,7 +1770,7 @@ button {
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -1964,4 +1983,7 @@ button {
   gap: 24px;
   max-width: -moz-min-content;
   max-width: min-content;
+}
+.social-item a:hover .icon {
+  fill: #9093A6;
 }/*# sourceMappingURL=style.css.map */

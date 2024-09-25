@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-.icon, .social-item svg {
+.icon {
   fill: #d4d7e6;
   width: 24px;
   height: 24px;
@@ -209,4 +209,7 @@
   gap: 24px;
   max-width: -moz-min-content;
   max-width: min-content;
+}
+.social-item a:hover .icon {
+  fill: #9093A6;
 }/*# sourceMappingURL=footer.css.map */
