@@ -1,7 +1,19 @@
 const swiperRestaurants = new Swiper('.restaurants-swiper', {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 4,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 4,
+    }
+  },
 
   navigation: {
     nextEl: '#restaurants-next',
@@ -12,7 +24,19 @@ const swiperRestaurants = new Swiper('.restaurants-swiper', {
 const swiperSpecialities = new Swiper('.specialities-swiper', {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 8,
+  slidesPerView: 2,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 6,
+    },
+    1440: {
+      slidesPerView: 8,
+    }
+  },
 
   navigation: {
     nextEl: '#specialities-next',

@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1296px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .icon {
@@ -127,13 +128,11 @@
 }
 
 .button-navigation--prev {
-  transform: translate(-50%, -50%);
-  left: 0;
+  left: -20px;
 }
 
 .button-navigation--next {
-  transform: translate(0, -50%);
-  right: 0;
+  right: -20px;
 }
 .button-navigation--next svg {
   transform: rotate(180deg);
