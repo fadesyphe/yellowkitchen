@@ -6,7 +6,6 @@
 
 html, body {
   height: 100vh;
-  overflow-x: hidden;
   color: #3F4255;
   font-family: "Martel Sans", sans-serif;
   font-size: 16px;
@@ -349,15 +348,20 @@ button {
 }
 
 .header {
-  z-index: 100;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 0.75rem 0;
   font-weight: 700;
   color: #9093A6;
   border-bottom: 1px solid #d4d7e6;
   background-color: #fff;
+  transition: position 0.5s ease;
+  transition: transform 0.5s ease;
+}
+.header.active {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
 }
 .header-top {
   display: flex;
@@ -371,7 +375,7 @@ button {
   z-index: 20;
   background-color: rgba(48, 48, 48, 0.6);
   width: 100%;
-  height: calc(100% - 72.8px);
+  height: 100vh;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s ease;
@@ -1556,6 +1560,7 @@ button {
   justify-content: center;
   gap: 25px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .peculiarities-item {
   min-width: 183px;
@@ -1592,6 +1597,10 @@ button {
 }
 .map {
   padding: 72px 0;
+}
+.map .section-inner {
+  height: 100%;
+  max-height: 600px;
 }
 
 .container {

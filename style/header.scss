@@ -1,16 +1,22 @@
 @import 'base';
 
 .header {
-  z-index: 100;
-  left: 0;
-  top: 0;
-
   width: 100%;
   padding: 0.75rem 0;
   font-weight: 700;
   color: $gray-second-text;
   border-bottom: 1px solid $gray-light;
   background-color: #fff;
+
+  transition: position .5s ease;
+  transition: transform .5s ease;
+
+  &.active {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+  }
 
   &-top {
     display: flex;
@@ -25,7 +31,7 @@
     z-index: 20;
     background-color: rgba(48, 48, 48, .6);
     width: 100%;
-    height: calc(100% - 72.8px);
+    height: 100vh;
     visibility: hidden;
     opacity: 0;
     transition: .5s ease;

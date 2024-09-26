@@ -54,6 +54,11 @@ buttonMenu.addEventListener('click', () => {
   menu.classList.toggle('active');
   buttonMenu.classList.toggle('active');
   body.classList.toggle('active');
+  if (header.classList.contains('active') && menu.classList.contains('active')) {
+    header.style.paddingRight = '22px'
+  } else {
+    header.style.paddingRight = null
+  }
 })
 
 const linksMenu = document.querySelectorAll('a[href*="#"]')
@@ -73,8 +78,23 @@ for (let linkMenu of linksMenu) {
 }
 
 const header = document.querySelector('.header');
-let ofsetY = oldOfsetY = 0;
+let headerHeight = header.offsetHeight;
+let oldScrollY = 0;
 window.addEventListener('scroll', () => {
-  console.log(window.scrollTop)
-})
+  if (window.scrollY <= oldScrollY) {
+    header.classList.add('active')
+    header.style.transform = 'translate(0, 0)'
+    body.style.marginTop = `${headerHeight}px`
+  } else {
+    header.classList.remove('active')
+    header.style.transform = `translate(0, -100%)`
+    body.style.marginTop = null
+  }
+  if (window.scrollY == 0) {
+    header.classList.remove('active')
+    body.style.marginTop = null
+    header.style.transform = 'translate(0, 0)'
+  }
+  oldScrollY = window.scrollY;
+});
 

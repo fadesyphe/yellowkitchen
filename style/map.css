@@ -1,3 +1,7 @@
 .map {
   padding: 72px 0;
+}
+.map .section-inner {
+  height: 100%;
+  max-height: 600px;
 }/*# sourceMappingURL=map.css.map */

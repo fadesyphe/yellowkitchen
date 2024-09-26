@@ -132,15 +132,20 @@
 }
 
 .header {
-  z-index: 100;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 0.75rem 0;
   font-weight: 700;
   color: #9093A6;
   border-bottom: 1px solid #d4d7e6;
   background-color: #fff;
+  transition: position 0.5s ease;
+  transition: transform 0.5s ease;
+}
+.header.active {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
 }
 .header-top {
   display: flex;
@@ -154,7 +159,7 @@
   z-index: 20;
   background-color: rgba(48, 48, 48, 0.6);
   width: 100%;
-  height: calc(100% - 72.8px);
+  height: 100vh;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s ease;
