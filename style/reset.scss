@@ -14,10 +14,6 @@ html, body {
 
 body.active {
   overflow: hidden;
-
-  @media screen and (min-width: 1023px) {
-    margin-right: 22px;
-  }
 }
 
 img {

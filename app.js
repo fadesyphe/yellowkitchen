@@ -1,3 +1,4 @@
+
 const swiperRestaurants = new Swiper('.restaurants-swiper', {
   direction: 'horizontal',
   loop: true,
@@ -49,15 +50,23 @@ const headerOverlay = document.querySelector(".header-overlay");
 const menu = document.querySelector(".menu");
 const body = document.querySelector("body");
 
+let widthScrollBar = window.innerWidth - body.clientWidth;
+console.log(widthScrollBar)
+
 buttonMenu.addEventListener('click', () => {
   headerOverlay.classList.toggle('active');
   menu.classList.toggle('active');
   buttonMenu.classList.toggle('active');
   body.classList.toggle('active');
   if (header.classList.contains('active') && menu.classList.contains('active')) {
-    header.style.paddingRight = '22px'
+    header.style.paddingRight = `${widthScrollBar}px`
   } else {
     header.style.paddingRight = null
+  }
+  if (body.classList.contains('active')) {
+    body.style.marginRight = `${widthScrollBar}px`
+  } else {
+    body.style.marginRight = null
   }
 })
 
