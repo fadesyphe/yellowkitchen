@@ -51,7 +51,6 @@ const menu = document.querySelector(".menu");
 const body = document.querySelector("body");
 
 let widthScrollBar = window.innerWidth - body.clientWidth;
-console.log(widthScrollBar)
 
 buttonMenu.addEventListener('click', () => {
   headerOverlay.classList.toggle('active');
@@ -106,4 +105,52 @@ window.addEventListener('scroll', () => {
   }
   oldScrollY = window.scrollY;
 });
+
+const addressInput = document.querySelector("#addressInput");
+const addressLabel = document.querySelector(".form-element");
+addressInput.addEventListener("focus", () => {
+  addressLabel.classList.add('active');
+  addressLabel.parentElement.style.gap = '1px'
+})
+addressInput.addEventListener("blur", () => {
+  addressLabel.classList.remove('active');
+  addressLabel.parentElement.style.gap = '2px'
+})
+
+let checkSymbols = '!@#$%^&*_+-=<>?|/[]{}`"№;:'
+const submitButton = document.querySelector("#submitButton");
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  for(let i = 0; i < checkSymbols.length; i++) {
+    if(addressInput.value.includes(checkSymbols[i])) {
+      addressLabel.classList.add('error');
+      fakeSymbol = true;
+    } else if(!fakeSymbol) {
+      addressInput.value = "";
+    }
+  }
+
+  if(!addressInput.value) {
+    alert("F")
+  }
+})
+
+let fakeSymbol;
+addressInput.addEventListener("input", ()=> {
+  if(addressLabel.classList.contains('error')) {
+    for(let j = 0; j < checkSymbols.length; j++) {
+      if(addressInput.value.includes(checkSymbols[j])) {
+        addressLabel.classList.add('error');
+        fakeSymbol = true;
+      }
+
+      if (!fakeSymbol) {
+        addressLabel.classList.remove('error');
+      }
+
+    }
+    fakeSymbol = false
+
+  }
+})
 
