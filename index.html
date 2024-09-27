@@ -6,7 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;700;800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style/style.css">
+
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
@@ -307,15 +308,13 @@
         </div>
 
         <form class="form">
-          <div>
-            <label for="address" class="form-element">
+            <label for="addressInput" class="form-element">
               <svg class="icon">
                 <use xlink:href="#location" />
               </svg>
-              <input class="form-text" placeholder="Enter delivery address" type="text" id="address"">
+              <input class="form-text" placeholder="Enter delivery address" type="text" id="addressInput" >
             </label>
-          </div>
-          <input class="button-primary" type="submit" value="send">
+          <input class="button-primary" type="submit" value="send" id="submitButton">
         </form>
       </div>
     </div>

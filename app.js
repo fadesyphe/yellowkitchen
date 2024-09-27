@@ -45,39 +45,34 @@ const swiperSpecialities = new Swiper('.specialities-swiper', {
   },
 });
 
-const buttonMenu = document.querySelector("#button-menu");
+const linksMenu = document.querySelectorAll('a[href*="#"]')
+const body = document.querySelector("body");
+const header = document.querySelector('.header');
 const headerOverlay = document.querySelector(".header-overlay");
 const menu = document.querySelector(".menu");
-const body = document.querySelector("body");
+const buttonMenu = document.querySelector("#button-menu");
+const addressInput = document.querySelector("#addressInput");
+const addressLabel = document.querySelector(".form-element");
 
+let headerHeight = header.offsetHeight;
+let oldScrollY = 0;
+let checkSymbols = '!@#$%^&*_+-=<>?|/[]{}`"№;:'
 let widthScrollBar = window.innerWidth - body.clientWidth;
+let fakeSymbol;
 
-buttonMenu.addEventListener('click', () => {
-  headerOverlay.classList.toggle('active');
-  menu.classList.toggle('active');
-  buttonMenu.classList.toggle('active');
-  body.classList.toggle('active');
-  if (header.classList.contains('active') && menu.classList.contains('active')) {
-    header.style.paddingRight = `${widthScrollBar}px`
-  } else {
-    header.style.paddingRight = null
-  }
-  if (body.classList.contains('active')) {
-    body.style.marginRight = `${widthScrollBar}px`
-  } else {
-    body.style.marginRight = null
-  }
-})
+function closeMenu() {
+  headerOverlay.classList.remove('active');
+  menu.classList.remove('active');
+  buttonMenu.classList.remove('active');
+  body.classList.remove('active');
+}
 
-const linksMenu = document.querySelectorAll('a[href*="#"]')
 for (let linkMenu of linksMenu) {
   linkMenu.addEventListener('click', (e) => {
     e.preventDefault()
     const blockId = linkMenu.getAttribute('href').substring(1)
-    headerOverlay.classList.remove('active');
-    menu.classList.remove('active');
-    buttonMenu.classList.remove('active');
-    body.classList.remove('active');
+    closeMenu();
+
     document.getElementById(blockId).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -85,10 +80,38 @@ for (let linkMenu of linksMenu) {
   })
 }
 
-const header = document.querySelector('.header');
-let headerHeight = header.offsetHeight;
-let oldScrollY = 0;
+buttonMenu.addEventListener('click', () => {
+
+  headerOverlay.classList.toggle('active');
+  menu.classList.toggle('active');
+  buttonMenu.classList.toggle('active');
+  body.classList.toggle('active');
+
+  if (header.classList.contains('active') && menu.classList.contains('active')) {
+    header.style.paddingRight = `${widthScrollBar}px`
+  } else {
+    header.style.paddingRight = null
+  }
+
+  if (body.classList.contains('active')) {
+    body.style.marginRight = `${widthScrollBar}px`
+    console.log("fds2")
+  } else {
+    body.style.marginRight = null
+    console.log("fds")
+  }
+
+})
+
+headerOverlay.addEventListener("click", (e)=> {
+  if(e.srcElement == headerOverlay) {
+    closeMenu();
+    body.style.marginRight = null;
+  }
+})
+
 window.addEventListener('scroll', () => {
+
   if (window.scrollY <= oldScrollY) {
     header.classList.add('active')
     header.style.transform = 'translate(0, 0)'
@@ -98,16 +121,17 @@ window.addEventListener('scroll', () => {
     header.style.transform = `translate(0, -100%)`
     body.style.marginTop = null
   }
+
   if (window.scrollY == 0) {
     header.classList.remove('active')
     body.style.marginTop = null
     header.style.transform = 'translate(0, 0)'
   }
+
   oldScrollY = window.scrollY;
 });
 
-const addressInput = document.querySelector("#addressInput");
-const addressLabel = document.querySelector(".form-element");
+
 addressInput.addEventListener("focus", () => {
   addressLabel.classList.add('active');
   addressLabel.parentElement.style.gap = '1px'
@@ -117,7 +141,6 @@ addressInput.addEventListener("blur", () => {
   addressLabel.parentElement.style.gap = '2px'
 })
 
-let checkSymbols = '!@#$%^&*_+-=<>?|/[]{}`"№;:'
 const submitButton = document.querySelector("#submitButton");
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -135,7 +158,6 @@ submitButton.addEventListener("click", (e) => {
   }
 })
 
-let fakeSymbol;
 addressInput.addEventListener("input", ()=> {
   if(addressLabel.classList.contains('error')) {
     for(let j = 0; j < checkSymbols.length; j++) {

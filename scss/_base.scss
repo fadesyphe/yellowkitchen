@@ -41,6 +41,7 @@ $gray-bg: #F4F2FC;
 .button-secondary {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   background-color: $gray-bg;
   border-radius: 4px;
@@ -87,7 +88,7 @@ $gray-bg: #F4F2FC;
   background-color: $yellow-bright;
   border-radius: 4px;
   color: $yellow-dark;
-  padding: 26px 24px;
+  padding: 25px 24px;
 
   font-weight: 700;
   letter-spacing: .5px;
