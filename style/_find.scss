@@ -28,10 +28,38 @@
   gap: 2px;
 
   &-element {
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     padding: 24px 16px;
     background-color: #fff;
-    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 40px 0 #00000014;
+    transition: .5s ease;
+    border: 1px solid transparent;
+
+    &:hover {
+      box-shadow: 0 8px 40px 0 rgba(0, 0, 0, .2);
+    }
+
+    &.active {
+      border-color: black;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &.error:after {
+      content: 'The field must not contain characters: "!, @, #, $, %, ^, &, *, _, +, -, =, <, >, ?, |, /, [, ], {, }, `"!';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      z-index: 1;
+      font-size: 12px;
+      color: red;
+    }
   }
 
   &-text {
@@ -51,11 +79,5 @@
       line-height: 24px;
     }
 
-  }
-
-  label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
