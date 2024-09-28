@@ -11,6 +11,7 @@ $gray-bg: #F4F2FC;
   max-width: 1296px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 
 .icon {
@@ -28,7 +29,12 @@ $gray-bg: #F4F2FC;
   }
   line-height: 64px;
   letter-spacing: 0.08em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
+
 %section-title2 {
   font: {
     family: "Poppins", sans-serif;
@@ -132,6 +138,16 @@ $gray-bg: #F4F2FC;
 
 .swiper-container {
   position: relative;
+
+  .button-secondary {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 30px auto 0;
+      max-width: 118px;
+    }
+  }
 }
 .swiper-button-lock {
   display: block !important;
@@ -152,6 +168,10 @@ $gray-bg: #F4F2FC;
   position: absolute;
   z-index: 1;
   top: 50%;
+
+  @media screen and (max-width: 768px) {
+    transform: translate(0, -56px)
+  }
 
   svg {
     height: 16px;

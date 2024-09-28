@@ -3,11 +3,21 @@
 .restaurants {
   padding: 48px 0 72px;
 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 48px;
+  }
+
   &-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    .button-secondary {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 
   &-slide {
@@ -20,7 +30,6 @@
       border-radius: 4px 4px 0 0;
     }
   }
-
 
 }
 

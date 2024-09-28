@@ -8,6 +8,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    .button-secondary {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 
   &-slider {
@@ -23,3 +29,4 @@
     }
   }
 }
+
