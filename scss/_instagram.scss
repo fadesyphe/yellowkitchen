@@ -5,8 +5,15 @@
   &-list {
     margin-top: 21px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &-wrapper-row {
+    display: flex;
+    justify-content: space-between;
     gap: 24px;
     flex-wrap: wrap;
   }
