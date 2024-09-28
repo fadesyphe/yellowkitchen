@@ -25,14 +25,14 @@ const swiperRestaurants = new Swiper('.restaurants-swiper', {
 const swiperSpecialities = new Swiper('.specialities-swiper', {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 2,
+  slidesPerView: 3,
 
   breakpoints: {
     768: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
     1024: {
-      slidesPerView: 6,
+      slidesPerView: 8,
     },
     1440: {
       slidesPerView: 8,
